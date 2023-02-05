@@ -1,0 +1,42 @@
+package LocatorsFactory;
+
+// to define locators present on academic background page
+public class AcademicBackgroundLocators {
+	
+	public static String acadCountryDropdown = "//*[@name='acad_country0']";
+	
+	public static String institution = "//textarea[@name='acad_inst0']";
+	
+	public static String qualification = "//textarea[@name='acad_qual0']";
+	
+	public static String duration = "//input[@name='acad_dur0']";
+	
+	public static String comp = "//input[@name='comp0']";
+	
+	public static String dateComp = "//input[@name='acad_day0']";
+	
+	public static String yearComp = "//input[@name='acad_year0']";
+	
+	public static String monthCompDropdown = "//*[@name='acad_month0']";
+	
+	public static String gPA = "//input[@type='text' and @name='acad_score0']";
+	
+	public static String acadUpload = "//input[@name='tertiary_award_doc' and @type='file']";
+	
+	public static String acadAddFile = "//input[@name='tertiary_award_doc' and @type='button']";
+	
+	public static String researchUpload = "//input[@name='research_proposal_doc' and @type='file']";
+	
+	public static String researchAddFile = "//input[@name='research_proposal_doc' and @type='button']";
+	
+	public static String researchPublication = "//textarea[@name='citation0']";
+	
+	public static String researchExperience = "//input[@name='exp_role0']";
+	
+	public static String acadPrizeAward = "//input[@name='prize_name0']";
+	
+	public static String tutionFees = "//input[@type='text' and @name='tuition_fees']";
+	
+	public static String livingExpenses = "//input[@type='text' and @name='living_expenses']";
+
+}

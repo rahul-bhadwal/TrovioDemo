@@ -1,0 +1,33 @@
+package ComponentsFactory;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.Reporter;
+
+import CommonUtilities.GenericMethods;
+import LocatorsFactory.LoginPageLocators;
+import LocatorsFactory.SponsorshipDetailsLocators;
+
+
+public class SponsorshipDetails {
+	GenericMethods GM;
+
+	public SponsorshipDetails() {
+		GM = new GenericMethods();
+	}
+	
+	// perform desired operations on sponsorship details page
+	public void sponsorshipDetails(WebDriver driver,String IsSponsorship) throws InterruptedException {
+		
+		if(IsSponsorship.equalsIgnoreCase("Yes")){
+			driver.findElement(By.xpath(SponsorshipDetailsLocators.yesSponsorship)).click();
+			} else if(IsSponsorship.equalsIgnoreCase("No")){
+				driver.findElement(By.xpath(SponsorshipDetailsLocators.noSponsorship)).click();
+				}
+		
+		driver.findElement(By.xpath(LoginPageLocators.next)).click();
+		Thread.sleep(2000);
+		Reporter.log("Sponsorship Details page created");
+	}
+
+}

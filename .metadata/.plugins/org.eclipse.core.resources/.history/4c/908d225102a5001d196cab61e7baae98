@@ -1,0 +1,19 @@
+package CredentialStore;
+
+// this contains the desired file location path and urls
+public class CredentialStores {
+	
+	public static String ChromeDriver = "C:\\Automation\\ConfigurationFiles\\DriverFile\\chromedriver.exe";
+	
+	public static String InputFileLocation = "C:\\Automation\\ConfigurationFiles\\Jar files\\InputFiles\\ApplyOnline\\";
+	public static String UploadFileLocation = "C:\\Automation\\ConfigurationFiles\\Jar files\\InputFiles\\ApplyOnline\\AttachmentFiles\\";
+	
+//	public static String ApplyOnlineUOWTestURL = "https://applytouowtst.uow.edu.au/app/welcomeUow.jsp";
+	public static String ApplyOnlineHDRTestURL = "https://applytouowtst.uow.edu.au/app/HDRLogin.jsp";
+//	public static String ApplyOnlineTestURL = "https://applytouowtst.uow.edu.au/app/servlet/Student";
+	public static String ApplyOnlineTestURL = "https://applytouowctst.uow.edu.au/app/servlet/StudentCollege";
+	
+	public static String Screenshotspath = "C:\\Automation\\Screenshots\\ApplyOnline\\testFailure.jpg";
+	public static String ReportFile1 = "C:\\Automation\\ConfigurationFiles\\Jar files\\InputFiles\\ApplyOnline\\ApplyOnline.xlsx";
+//	public static String ReportFile2 = "C:\\Automation\\ConfigurationFiles\\Jar files\\test-output\\Extent.html";
+}

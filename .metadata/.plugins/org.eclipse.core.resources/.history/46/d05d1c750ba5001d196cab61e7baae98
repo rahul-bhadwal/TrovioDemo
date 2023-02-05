@@ -1,0 +1,59 @@
+package ComponentsFactory;
+
+import java.awt.AWTException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
+
+import CommonUtilities.GenericMethods;
+import CredentialStore.CredentialStores;
+import LocatorsFactory.LoginPageLocators;
+import LocatorsFactory.PersonalDetailsLocators;
+import LocatorsFactory.AcademicBackgroundLocators;
+
+public class Login {
+	GenericMethods GM;
+	
+	public Login() {
+		GM = new GenericMethods();
+
+	}
+	// perform desired operations on academic background page
+	public void academicBackground(WebDriver driver, String Username, String Password) throws InterruptedException, AWTException {
+		
+		// explicit wait - to wait for the element to be click-able
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		
+		new Select(driver.findElement(By.xpath(LoginPageLocators.username))).selectByVisibleText(CountryAQ);
+		driver.findElement(By.xpath(AcademicBackgroundLocators.password)).sendKeys(Institution);
+		driver.findElement(By.xpath(AcademicBackgroundLocators.qualification)).sendKeys(Qualification);
+		driver.findElement(By.xpath(AcademicBackgroundLocators.duration)).sendKeys(Duration);
+		
+		if(Comp.equalsIgnoreCase("Yes")) {
+			driver.findElement(By.xpath(AcademicBackgroundLocators.comp)).click();
+			Thread.sleep(1000);
+			driver.findElement(By.xpath(AcademicBackgroundLocators.dateComp)).sendKeys(DateComp);
+			driver.findElement(By.xpath(AcademicBackgroundLocators.yearComp)).sendKeys(YearComp);
+			Thread.sleep(1000);
+			new Select(driver.findElement(By.xpath(AcademicBackgroundLocators.monthCompDropdown))).selectByVisibleText(MonthComp);
+		}
+		
+
+	    
+		p1 = CredentialStores.UploadFileLocation + FileName2;
+		GM.fileUpload(driver, By.xpath(AcademicBackgroundLocators.acadUpload),p1);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(AcademicBackgroundLocators.acadAddFile)));
+		Thread.sleep(3000);
+		driver.findElement(By.xpath(AcademicBackgroundLocators.acadAddFile)).click();
+		Thread.sleep(2000);
+		SCN.saveCloseNext(driver);
+		
+		Thread.sleep(2000);
+		Reporter.log("Academic background page created");
+	}
+
+}

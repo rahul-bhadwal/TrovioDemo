@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="HomePageTests" project="SauceDemo" tests="6" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="TestScripts.HomePageTests" incomplete="true">
+    <testcase name="buyProductWithIncorrectLastName" classname="TestScripts.HomePageTests" incomplete="true"/>
+    <testcase name="buyProduct" classname="TestScripts.HomePageTests" incomplete="true"/>
+    <testcase name="buyProductWithEmptyFirstName" classname="TestScripts.HomePageTests" incomplete="true"/>
+    <testcase name="cancelPurchase" classname="TestScripts.HomePageTests" incomplete="true"/>
+    <testcase name="buyProductFromItsPage" classname="TestScripts.HomePageTests" incomplete="true"/>
+    <testcase name="buyProductWithIncorrectPostalCode" classname="TestScripts.HomePageTests" incomplete="true"/>
+  </testsuite>
+</testrun>

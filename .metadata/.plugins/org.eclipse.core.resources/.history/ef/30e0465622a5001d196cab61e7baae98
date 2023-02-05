@@ -1,0 +1,34 @@
+package ComponentsFactory;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.Reporter;
+
+import CommonUtilities.GenericMethods;
+import LocatorsFactory.LoginPageLocators;
+import LocatorsFactory.EnglishProficiencyLocators;
+
+
+public class EnglishProficiency {
+	SaveCloseNext SCN;
+	
+	public EnglishProficiency() {
+		SCN = new SaveCloseNext();
+	}
+	
+	// perform desired operations on english proficiency page
+	public void englishProficiency(WebDriver driver,String IsEngFL) throws InterruptedException {
+		
+		if(IsEngFL.equalsIgnoreCase("Yes")){
+			driver.findElement(By.xpath(EnglishProficiencyLocators.yesEnglish)).click();
+			} else if(IsEngFL.equalsIgnoreCase("No")){
+				driver.findElement(By.xpath(EnglishProficiencyLocators.noEnglish)).click();
+				}
+		
+		SCN.saveCloseNext(driver);
+		
+		Thread.sleep(2000);
+		Reporter.log("English proficiency page created");
+	}
+
+}

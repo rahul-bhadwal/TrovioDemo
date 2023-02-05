@@ -1,0 +1,9 @@
+package LocatorsFactory;
+
+public class ReviewOrderPageLocators {
+
+	public static String finishButton = "//a[@class='btn_action cart_button']";
+
+	public static String cancelButton = "//a[@class='cart_cancel_link btn_secondary']";
+
+}

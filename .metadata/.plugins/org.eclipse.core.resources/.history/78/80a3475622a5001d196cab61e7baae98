@@ -1,0 +1,52 @@
+package ComponentsFactory;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Reporter;
+
+import CommonUtilities.GenericMethods;
+import LocatorsFactory.LoginPageLocators;
+import LocatorsFactory.ContactDetailsLocators;
+
+public class ContactDetails {
+	SaveCloseNext SCN;
+	
+	public ContactDetails() {
+		SCN = new SaveCloseNext();
+	}
+	
+	// perform desired operations on contact details page
+	public void contactDetails(WebDriver driver,String CountryCD,String StreetAddress, String SuburbTown, String State, String HomeTelephone, String Mobile) throws InterruptedException {
+		
+		if (!(CountryCD.equalsIgnoreCase("NA"))){
+			new Select(driver.findElement(By.xpath(ContactDetailsLocators.countryDropdown))).selectByVisibleText(CountryCD);
+		}
+		
+		if (!(StreetAddress.equalsIgnoreCase("NA"))){
+		driver.findElement(By.xpath(ContactDetailsLocators.streetName)).sendKeys(StreetAddress);
+		}
+		
+		if (!(SuburbTown.equalsIgnoreCase("NA"))){
+		driver.findElement(By.xpath(ContactDetailsLocators.suburbTown)).sendKeys(SuburbTown);
+		}
+		
+		if (!(State.equalsIgnoreCase("NA"))){
+		driver.findElement(By.xpath(ContactDetailsLocators.state)).sendKeys(State);
+		}
+		
+		if (!(HomeTelephone.equalsIgnoreCase("NA"))){
+		driver.findElement(By.xpath(ContactDetailsLocators.homeTelephone)).sendKeys(HomeTelephone);
+		}
+		
+		if (!(Mobile.equalsIgnoreCase("NA"))){
+		driver.findElement(By.xpath(ContactDetailsLocators.mobile)).sendKeys(Mobile);
+		}
+		
+		SCN.saveCloseNext(driver);
+		
+		Thread.sleep(2000);
+		Reporter.log("Enter Contact Details - Passed. ");
+	}
+
+}

@@ -1,0 +1,24 @@
+package ComponentsFactory;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.Reporter;
+
+import LocatorsFactory.LoginPageLocators;
+
+public class SaveCloseNext {
+	
+	// to perform save, close window and next operation on the apply online form
+	public void saveCloseNext(WebDriver driver) throws InterruptedException {
+		
+		driver.findElement(By.xpath(LoginPageLocators.save)).click();
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath(LoginPageLocators.closeWindow)).click();
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath(LoginPageLocators.next)).click();
+		Thread.sleep(2000);
+	}
+
+}

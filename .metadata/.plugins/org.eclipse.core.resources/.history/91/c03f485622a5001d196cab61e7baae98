@@ -1,0 +1,25 @@
+package ComponentsFactory;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.Reporter;
+
+import CommonUtilities.GenericMethods;
+import LocatorsFactory.LoginPageLocators;
+
+public class AdditionalDocuments {
+	SaveCloseNext SCN;
+	
+	public AdditionalDocuments() {
+		SCN = new SaveCloseNext();
+	}
+	
+	// perform desired operations on additional documents page
+	public void additionalDocuments(WebDriver driver) throws InterruptedException {
+		
+		SCN.saveCloseNext(driver);	
+		Thread.sleep(2000);
+		Reporter.log("Additional documents added.");
+	}
+
+}

@@ -1,0 +1,73 @@
+package ComponentsFactory;
+
+import java.awt.AWTException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
+
+import CommonUtilities.GenericMethods;
+import LocatorsFactory.LoginPageLocators;
+
+
+public class Login {
+	GenericMethods GM;
+	
+	private String title = "Swag Labs";
+	private String errorNotificationUsername = "Username is required";
+	private String errorNotificationPassword = "Password is required";
+	private String strUsernameAndPassDoNotMatch = "Username and password do not match any user in this service";
+	
+	public Login() {
+		GM = new GenericMethods();
+
+	}
+	// perform desired operations on academic background page
+	public void academicBackground(WebDriver driver, String Username, String Password) throws InterruptedException, AWTException {
+		
+		// explicit wait - to wait for the element to be click-able
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		
+		new Select(driver.findElement(By.xpath(LoginPageLocators.username))).selectByVisibleText(Username);
+		driver.findElement(By.xpath(LoginPageLocators.password)).sendKeys(Password);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(LoginPageLocators.login)));
+		driver.findElement(By.xpath(LoginPageLocators.login)).click();
+		Reporter.log("Login successfully");
+	}
+	
+	public String getErrorNotificationUsername() {
+	    return errorNotificationUsername;
+	  }
+
+	  public String getErrorNotificationPassword() {
+	    return errorNotificationPassword;
+	  }
+
+	  public String notificationUsername(WebDriver driver) {
+	    WebElement strUserNameIsRequired = driver.findElement(By.xpath(LoginPageLocators.userNameIsRequired));
+	    return strUserNameIsRequired.getText();
+	  }
+
+	  public String notificationUsernameAndPassword(WebDriver driver) {
+	    WebElement strNotificationUsernameAndPassword = driver.findElement(By.xpath(LoginPageLocators.errorNotificationUsernameAndPassword));
+	    return strNotificationUsernameAndPassword.getText();
+	  }
+
+	  public String notificationPassword(WebDriver driver) {
+	    WebElement strNotificationPassword = driver.findElement(By.xpath(LoginPageLocators.passIsRequired));
+	    return strNotificationPassword.getText();
+	  }
+
+	  public String getStrUsernameAndPassDoNotMatch() {
+	    return strUsernameAndPassDoNotMatch;
+	  }
+
+	  public Boolean loginButtonIsDisplayed(WebDriver driver) {
+	    return driver.findElement(loginButton).isDisplayed();
+	  }
+
+}

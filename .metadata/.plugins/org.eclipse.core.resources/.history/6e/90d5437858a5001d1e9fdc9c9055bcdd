@@ -1,0 +1,29 @@
+package TestScripts;
+
+import org.apache.log4j.Logger;
+import org.junit.After;
+import org.junit.Before;
+//import org.junit.After;
+//import org.junit.Before;
+import org.openqa.selenium.WebDriver;
+import org.testng.TestListenerAdapter;
+import org.testng.TestNG;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import CommonTestScenarios.LandingOnHomePageChrome;
+import CommonUtilities.GenericMethods;
+
+public class MainDriverClass {
+	public WebDriver driver;
+
+	  @Before
+	  public void setUp() throws Exception {
+		  driver = new LandingOnHomePageChrome().landingOnHomePage();
+	  }
+
+	  @After
+	  public void close() {
+	    driver.quit();
+	  }
+}

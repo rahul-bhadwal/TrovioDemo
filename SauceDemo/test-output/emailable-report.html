@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>TestNG Report</title><style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}</style></head><body><table><tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr><tr><th colspan="7">Command line suite</th></tr><tr><td><a href="#t0">Command line test</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">1</td><td class="num">20,552</td><td></td><td></td></tr></table><table><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Command line suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">TestScripts.MainDriverClass</td><td><a href="#m0">HomePageScripts</a></td><td rowspan="1">1675632510644</td><td rowspan="1">7334</td></tr><tr><th colspan="4">Command line test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">TestScripts.MainDriverClass</td><td><a href="#m1">cartPageScripts</a></td><td rowspan="1">1675632508628</td><td rowspan="1">2013</td></tr><tr class="passedeven"><td><a href="#m2">loginPageScripts</a></td><td rowspan="1">1675632506506</td><td rowspan="1">2067</td></tr></tbody></table><h2>Command line test</h2><h3 id="m0">TestScripts.MainDriverClass#HomePageScripts</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;UOW-95QM7S2&apos;, ip: &apos;192.168.1.101&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}), userDataDir=C:\Users\rbhadwal\AppData\Local\Temp\scoped_dir4756_414160942}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:58396}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=109.0.5414.120, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: d622858a40d9251cb6db46a6b8ebe170
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:533)
+	at CommonUtilities.GenericMethods.tearDown(GenericMethods.java:50)
+	at TestScripts.MainDriverClass.HomePageScripts(MainDriverClass.java:89)
+	at TestScripts.MainDriverClass.main(MainDriverClass.java:103)
+Caused by: java.lang.RuntimeException: Process refused to die after 10 seconds, and couldn&apos;t taskkill it: Couldn&apos;t detect pid
+	at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:133)
+	at org.openqa.selenium.os.ProcessUtils.killProcess(ProcessUtils.java:81)
+	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.destroyHarder(UnixProcess.java:246)
+	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.access$200(UnixProcess.java:200)
+	at org.openqa.selenium.os.UnixProcess.destroy(UnixProcess.java:126)
+	at org.openqa.selenium.os.CommandLine.destroy(CommandLine.java:153)
+	at org.openqa.selenium.remote.service.DriverService.stop(DriverService.java:221)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:94)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	... 27 more
+Caused by: java.lang.RuntimeException: Couldn&apos;t detect pid
+	at org.openqa.selenium.os.ProcessUtils.getProcessId(ProcessUtils.java:195)
+	at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:128)
+	... 35 more
+	at org.openqa.selenium.os.ProcessUtils.getProcessId(ProcessUtils.java:181)
+	... 36 more
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m1">TestScripts.MainDriverClass#cartPageScripts</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m2">TestScripts.MainDriverClass#loginPageScripts</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>

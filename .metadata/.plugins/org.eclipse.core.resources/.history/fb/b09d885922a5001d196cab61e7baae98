@@ -1,0 +1,43 @@
+package ComponentsFactory;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
+
+import LocatorsFactory.LoginPageLocators;
+import LocatorsFactory.SubmitApplicationLocators;
+
+public class SubmitApplication {
+	String s;
+	// perform desired operations on submit application page
+	public String submitApplication(WebDriver driver) throws Exception {
+		
+		// explicit wait - to wait for the element to be click-able
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		
+		driver.findElement(By.xpath(LoginPageLocators.applyCondition1)).click();
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath(LoginPageLocators.applyCondition2)).click();
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath(LoginPageLocators.iAccept)).click();
+		Thread.sleep(1000);
+		
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(LoginPageLocators.submit)));
+		driver.findElement(By.xpath(LoginPageLocators.submit)).click();
+		Thread.sleep(1000);
+		if(driver.findElements(By.xpath("//h3[contains(text(),'Thank you.')]")).size() != 0) {
+			WebElement n = driver.findElement(By.xpath(SubmitApplicationLocators.appNumber));
+			s = n.getText();
+			Reporter.log("Application submitted");
+		} else {
+			throw new Exception();
+		}
+		Reporter.log("Application submit.");
+		return s;
+	}
+}

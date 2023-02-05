@@ -1,0 +1,69 @@
+package ComponentsFactory;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
+
+import CommonUtilities.GenericMethods;
+import LocatorsFactory.LoginPageLocators;
+import LocatorsFactory.CourseApplicationHDRLocators;
+import LocatorsFactory.CourseApplicationLocators;
+
+public class CourseApplication {
+	SaveCloseNext SCN;
+	
+	public CourseApplication() {
+		SCN = new SaveCloseNext();
+	}
+	
+	// perform desired operations on course application page
+	public void courseApplication(WebDriver driver,String CommYear,String CourseLevel, String Campus, String Course, String ModeOfDelivery, String Session) throws InterruptedException {
+		
+		// explicit wait - to wait for the element to be click-able
+		WebDriverWait wait = new WebDriverWait(driver,60);
+		
+		if (!(CommYear.equalsIgnoreCase("NA"))){
+		new Select(driver.findElement(By.xpath(CourseApplicationLocators.commencementYearDropdown))).selectByVisibleText(CommYear);
+		}
+		
+		if (!(CourseLevel.equalsIgnoreCase("NA"))){
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(CourseApplicationLocators.courseLevelDropdown)));
+		Thread.sleep(2000);
+		new Select(driver.findElement(By.xpath(CourseApplicationLocators.courseLevelDropdown))).selectByVisibleText(CourseLevel);
+		}
+		
+		if (!(Campus.equalsIgnoreCase("NA"))){
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(CourseApplicationLocators.campusDropdown)));
+		Thread.sleep(2000);
+		new Select(driver.findElement(By.xpath(CourseApplicationLocators.campusDropdown))).selectByVisibleText(Campus);
+		}
+		
+		if (!(Course.equalsIgnoreCase("NA"))){
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(CourseApplicationLocators.courseDropdown)));
+		Thread.sleep(2000);
+		new Select(driver.findElement(By.xpath(CourseApplicationLocators.courseDropdown))).selectByVisibleText(Course);		
+		}
+		
+		if (!(ModeOfDelivery.equalsIgnoreCase("NA"))){
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(CourseApplicationLocators.modeOfDeliveryDropdown)));
+		Thread.sleep(2000);
+		new Select(driver.findElement(By.xpath(CourseApplicationLocators.modeOfDeliveryDropdown))).selectByVisibleText(ModeOfDelivery);
+		}
+		
+		if (!(Session.equalsIgnoreCase("NA"))){
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(CourseApplicationLocators.sessionDropdown)));
+		Thread.sleep(2000);
+		new Select(driver.findElement(By.xpath(CourseApplicationLocators.sessionDropdown))).selectByVisibleText(Session);
+		}
+		
+		SCN.saveCloseNext(driver);
+		
+		Thread.sleep(2000);
+
+		Reporter.log("Enter Course Application details - Passed. ");
+	}
+
+}
