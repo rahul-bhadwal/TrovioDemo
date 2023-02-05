@@ -2876,3 +2876,19 @@ org.eclipse.core.runtime.CoreException: Launch configuration MainDriverClass ref
 2023-02-06 09:25:03,785 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2023-02-06 09:25:03,786 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rbhadwal\AutomationDemo\SauceDemo\src\main\resources
 2023-02-06 09:25:03,787 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-02-06 09:25:03,787 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rbhadwal\AutomationDemo\SauceDemo\src\test\resources
+2023-02-06 09:35:08,178 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-02-06 09:35:08,178 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rbhadwal\AutomationDemo\SauceDemo\src\main\resources
+2023-02-06 09:35:08,179 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-02-06 09:35:08,179 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rbhadwal\AutomationDemo\SauceDemo\src\test\resources
+2023-02-06 09:35:14,752 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-02-06 09:35:14,752 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rbhadwal\AutomationDemo\SauceDemo\src\main\resources
+2023-02-06 09:35:14,752 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-02-06 09:35:14,752 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rbhadwal\AutomationDemo\SauceDemo\src\test\resources
+2023-02-06 09:35:27,977 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-02-06 09:35:27,978 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rbhadwal\AutomationDemo\SauceDemo\src\main\resources
+2023-02-06 09:35:27,979 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-02-06 09:35:27,979 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rbhadwal\AutomationDemo\SauceDemo\src\test\resources
+2023-02-06 09:35:34,498 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-02-06 09:35:34,498 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rbhadwal\AutomationDemo\SauceDemo\src\main\resources
+2023-02-06 09:35:34,500 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
